@@ -3,8 +3,8 @@
 
 Structure: profiles are well-formed and indexed; skill frontmatter names match their dirs; JSON
 artifacts parse; python artifacts compile.
-Drift: the invariant layer (CLAUDE.md core, verify/audit/roadmap skills, the hook, generic
-templates) must not re-acquire dev-only phrasing — the exact regression the profile layer fixed.
+Drift: the invariant layer (.omp/AGENTS.md core, verify/audit/roadmap skills, the done-gate
+extension, generic templates) must not re-acquire dev-only phrasing — the exact regression the profile layer fixed.
 Dev phrasing is allowed only where the development instantiation legitimately lives."""
 import json, os, py_compile, re, sys, tempfile
 

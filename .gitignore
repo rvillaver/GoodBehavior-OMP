@@ -5,7 +5,7 @@
 #
 # Durable lessons reach the distributed bundle through TODO.md / CLAUDE.md /
 # skills instead, where they're genericized by rule. See the three-tier model:
-#   - distributed (skills/hook/templates/CLAUDE.md) — pure generic method
+#   - distributed (skills/extension/templates + AGENTS.md + RULES.md) — pure generic method
 #   - tracked source-only (README, TODO.md)         — generic by rule
 #   - self-dev scratch (docs/)                       — local only, may name projects
 docs/

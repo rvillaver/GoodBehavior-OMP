@@ -220,7 +220,8 @@ export default function doneGate(pi: ExtensionAPI): void {
 			const verdict = evaluateTurn(text, tools);
 			if (!verdict) return undefined;
 			firesThisTurn++;
-			return verdict; // { decision: "block", reason }
+			// session_stop contract: { decision: "block", reason } — not the tool_call { block } shape
+			return { decision: "block" as const, reason: verdict.reason };
 		} catch {
 			return undefined; // never break the session on a gate error
 		}
