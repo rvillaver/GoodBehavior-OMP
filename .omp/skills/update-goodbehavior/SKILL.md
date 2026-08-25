@@ -23,7 +23,7 @@ a symlink) precisely so a project can diverge; this skill is how divergence and 
 ## Reconcile — run the script; keep the judgment
 The merge mechanics are deterministic and live in the source repo — run them, don't re-improvise them:
 ```sh
-<source>/scripts/update.py --target <project>     # add --dry-run first to preview
+bun <source>/scripts/update.ts --target <project>     # add --dry-run first to preview
 ```
 Per tracked file it does exactly: **theirs** = `NEW:<from>`, **base** = `<sourceCommit>:<from>`, **ours** = the local
 file; sha256-match → fast-forward (**updated**); otherwise `git merge-file` 3-way → **merged** or **conflict** (markers
@@ -35,7 +35,7 @@ Your judgment on top of the report:
 - **Conflicts** — walk the user through each marked file; don't resolve silently.
 - **Upstream additions** (files in `NEW` under the bundle paths but absent from the manifest — e.g. a new skill or
   profile): the script doesn't auto-add; decide with the user, then copy + add a manifest entry (or re-run
-  `install.py` with just the additions in the plan).
+  `install.ts` with just the additions in the plan).
 - **Upstream removals** — the script kept them; deleting is the user's call.
 - **Script missing** (an old source): fall back to performing the same steps by hand with `git show` + `git merge-file`,
   preserving the exact statuses above.

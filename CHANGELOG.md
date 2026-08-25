@@ -3,6 +3,15 @@
 Every entry here is a unit a downstream project will 3-way-merge via `update-goodbehavior` — write entries so an
 adopter skimming before an update knows what's coming and why.
 
+## Unreleased — Bun-only toolchain
+
+The gates and mechanics no longer require Python — OMP ships the Bun runtime, so the whole bundle runs on it alone:
+- **Scripts:** `scripts/install.py` → `scripts/install.ts`, `scripts/update.py` → `scripts/update.ts` (same plan
+  format, same guarantees: never clobber, sha256 manifest, idempotent; update's four merge paths unchanged).
+  Invoke with `bun scripts/install.ts --plan …` / `bun scripts/update.ts --target …`.
+- **Self-test:** `tests/run_all.py` and `test_*.py` → `tests/run_all.test.ts` + `*.test.ts` (run
+  `bun tests/run_all.test.ts`; lint now transpile-checks the TypeScript scripts instead of py_compile).
+
 ## Unreleased — ported to OMP
 
 The bundle now ships for OMP (`omp`) instead of Claude Code — a path/mechanism port; principles and skill content are

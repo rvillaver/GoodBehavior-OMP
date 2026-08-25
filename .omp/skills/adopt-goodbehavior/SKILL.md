@@ -1,6 +1,6 @@
 ---
 name: adopt-goodbehavior
-description: The intelligent installer & entry point — adopt the GoodBehavior method into a destination project (by path). Elicits the project's intent, resolves its profile (development/analysis/research/creative, composable), analyzes its workflow, proposes tailored amendments WITH OPTIONS, then after confirmation installs via scripts/install.py — integrating with what's already there, never imposing a parallel structure.
+description: The intelligent installer & entry point — adopt the GoodBehavior method into a destination project (by path). Elicits the project's intent, resolves its profile (development/analysis/research/creative, composable), analyzes its workflow, proposes tailored amendments WITH OPTIONS, then after confirmation installs via scripts/install.ts — integrating with what's already there, never imposing a parallel structure.
 ---
 
 Bring the disciplined method into a destination project by **adapting to it, not overwriting it**. adopt is the
@@ -96,7 +96,7 @@ project adapts its copy to its stack without touching other projects or your glo
 reconciles later via 3-way merge).
 
 ## Phase 4 — Execute INTO the target (only after confirmation; idempotent)
-Split cleanly: the **mechanics run through `<source>/scripts/install.py`** (identical every time — copy, hash, place
+Split cleanly: the **mechanics run through `<source>/scripts/install.ts`** (identical every time — copy, hash, place
 the gate, manifest); you do only the **judgment steps** the script can't.
 
 1. **Run the installer.** Write the confirmed choices as a plan JSON and execute it:
@@ -111,7 +111,7 @@ the gate, manifest); you do only the **judgment steps** the script can't.
    }
    ```
    ```sh
-   <source>/scripts/install.py --plan <plan.json>     # add --dry-run first if unsure
+   bun <source>/scripts/install.ts --plan <plan.json>     # add --dry-run first if unsure
    ```
    The script guarantees: never clobbers (existing files skipped + reported), the done-gate copied to
    `<target>/.omp/extensions/done-gate.ts` — OMP auto-discovers it, so there is no settings wiring step — and a
@@ -140,7 +140,7 @@ its `.omp/skills/` holds the copies. Do NOT claim the method "works" — the sca
 on the first real task via `/skill:audit-goodbehavior` → `/skill:roadmap-goodbehavior` → `/skill:gate-build-goodbehavior`.
 
 > Source files (skills, the done-gate extension, `templates/`, `scripts/`) ship with this bundle in its git repo.
-> Resolve them from the **source** path recorded in (or about to be written to) the manifest. Prefer `scripts/install.py`
+> Resolve them from the **source** path recorded in (or about to be written to) the manifest. Prefer `scripts/install.ts`
 > for the mechanics; only fall back to manual copying if the script is missing (an old source), and then follow its
 > guarantees by hand (never clobber; hash into the manifest). Never install outside the target's `.omp/` (plus the
 > confirmed planning/doc paths).

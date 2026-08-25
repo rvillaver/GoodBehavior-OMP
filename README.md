@@ -30,8 +30,8 @@ its files.
 | `learn-goodbehavior` | Writes a durable learning to memory (so it's not relearned). | skill |
 | `update-goodbehavior` | Pulls the latest bundle from its source repo and 3-way-merges it into the local copy, preserving project-local adaptations. | skill |
 | `.omp/extensions/done-gate.ts` | A TypeScript `session_stop` extension, auto-discovered by OMP on startup: pushes back on "done" without evidence — including *behaviorally*: verification vocabulary is honored only if something was actually run/observed after the last file change that turn. No settings file, no executable bit, no Python required. | enforcement |
-| `scripts/install.py` · `scripts/update.py` | The mechanical halves of adopt/update, deterministic: copy+hash+wire+manifest, and the git 3-way merge. The skills keep the judgment; the scripts keep the consistency. | tooling |
-| `tests/run_all.py` | The bundle held to its own standard: gate behavior, install round-trip, update merge paths, structural+drift lint — one command, all green before shipping. | self-test |
+| `scripts/install.ts` · `scripts/update.ts` | The mechanical halves of adopt/update, deterministic: copy+hash+wire+manifest, and the git 3-way merge. The skills keep the judgment; the scripts keep the consistency. Run with `bun` — no Python required. | tooling |
+| `tests/run_all.test.ts` | The bundle held to its own standard: gate behavior, install round-trip, update merge paths, structural+drift lint — one command, all green before shipping (`bun tests/run_all.test.ts`). | self-test |
 
 Guidance shapes intent; **only the gate enforces** when intent slips. That's the point — the method failed before
 precisely because nothing stopped a lazy turn.
@@ -53,7 +53,7 @@ It then **resolves** source (this bundle) and target (your project), **analyzes*
 **proposes** tailored amendments (where principles live, the confirmed dev approach, planning/memory) **with options**,
 **asks** before writing anything, and only then installs idempotently into the target's `.omp/` — copying the skills,
 done-gate extension, and templates from the source, merging into existing docs/conventions rather than forking them,
-and recording exactly what it installed in a manifest — the mechanical steps run through `scripts/install.py`, so every
+and recording exactly what it installed in a manifest — the mechanical steps run through `scripts/install.ts`, so every
 install is identical. (`adopt-goodbehavior` itself is **not** copied into targets — it's a run-once installer; targets
 carry the working skills plus `update-goodbehavior`.) After install, invoke the other `*-goodbehavior` skills from a
 session opened **in the target project**.
