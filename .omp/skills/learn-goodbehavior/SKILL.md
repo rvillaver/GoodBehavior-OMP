@@ -33,6 +33,18 @@ alone whether to open the file.
 Don't record what the repo already states (code structure, past fixes, git history, AGENTS.md). If asked to "remember"
 something obvious, ask what was *non-obvious* about it and record that.
 
+## Promotion check — project fact vs general discipline
+Before writing, classify the learning:
+- **Project fact** — true because of this project, machine, deploy path, data source, user preference, or local history.
+  Record it only in project memory.
+- **General discipline** — portable rule that would improve GoodBehavior everywhere. Record the local memory first, then
+  propose the identity-stripped generic rewrite into `.omp/AGENTS.md` and/or the relevant skill. Ask before editing
+  principles or distributing the change; never auto-rewrite the persona from one local incident.
+
+For a promoted learning, keep the project memory factual (what happened here) and make the upstream wording generic
+(what future projects should do). Strip names, paths, URLs, customers, credentials, and any detail not needed to teach
+the rule. If the promotion is accepted upstream, add the commit/PR reference to the memory so future updates can trace it.
+
 ## Format (one file)
 ```
 ---

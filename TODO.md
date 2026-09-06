@@ -12,10 +12,10 @@ project fact), its generic form is distilled into `.omp/AGENTS.md` / the relevan
 The self-update model (`update-goodbehavior`, 3-way merge) is the carrier: a principle improved in one project's copy can
 flow upstream and back out to others.
 
-- [ ] **Build the promotion path.** Extend `learn-goodbehavior` (or add a step) to distinguish a *project fact* (stays
+- [x] **Build the promotion path.** Extend `learn-goodbehavior` (or add a step) to distinguish a *project fact* (stays
       in project memory) from a *general discipline* (gets a generic rewrite proposed into `.omp/AGENTS.md`/a skill). Ask
       before editing principles; never auto-rewrite the persona.
-- [ ] Decide how a project-local principle improvement travels back to the source repo (PR? a "contribute-up" note in
+- [x] Decide how a project-local principle improvement travels back to the source repo (PR? a "contribute-up" note in
       `update-goodbehavior`?), so good practice isn't trapped in one copy.
 
 ## Promoted into the loop (log)

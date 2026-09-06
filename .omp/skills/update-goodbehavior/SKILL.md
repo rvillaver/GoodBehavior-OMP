@@ -39,6 +39,9 @@ Your judgment on top of the report:
 - **Upstream removals** — the script kept them; deleting is the user's call.
 - **Script missing** (an old source): fall back to performing the same steps by hand with `git show` + `git merge-file`,
   preserving the exact statuses above.
+- **Local improvements worth upstreaming** — if a locally-adapted principle, skill, template, or memory captures a
+  general discipline (not merely a project fact), flag it as a `contribute-up` candidate. Ask the user whether to open
+  a PR/patch against the source repo or leave a note for later; never silently fold project-specific detail upstream.
 
 **The done-gate needs no wiring in OMP.** The extension lives at `.omp/extensions/done-gate.ts` and OMP auto-discovers
 it — there is no hook config to preserve or repair. Update only the extension file itself, and treat local edits to it
