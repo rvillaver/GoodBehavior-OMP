@@ -1,7 +1,14 @@
 ---
 name: audit-goodbehavior
-description: Produce an honest, reference-cross-checked gap register — the concrete delta between what exists and what's wanted, grouped and severity-tagged, built in gated batches (not all at once). Use before building, when the user wants to know "what are ALL the gaps" against a reference (design, spec, competitor, demo).
+description: Produce a gap register — the concrete delta between what exists and what's wanted, cross-checked against a reference. Use when the user wants to know "what are ALL the gaps" against a design, spec, competitor, or demo.
 ---
+
+**Loop position:** step 2 — after *Understand*, before `/skill:roadmap-goodbehavior`. The doctrine (loop, done rule, lenses) is
+the project's active profile (`.omp/goodbehavior/profiles/`), already in your instructions — don't restate it, apply it.
+
+**Nothing built yet?** If the workspace has no code to compare against the reference, the audit is one line — "0% built;
+reference = <doc>" — and the next step is `/skill:roadmap-goodbehavior` from the reference's own sections. Don't hunt for a
+build elsewhere on the machine and don't interrogate the user.
 
 Catalog the gaps between the current build and the reference, concretely and honestly. The output is a gap register
 under `docs/audit/` (a **default, not a prescription** — if the project keeps findings elsewhere per its recorded
@@ -20,7 +27,7 @@ conventions, write there), which `/skill:roadmap-goodbehavior` later rolls into 
 
 ## Adversarial, multi-lens
 A single read only finds what it was looking for. Pass each area through **independent lenses** and surface where they
-*contradict*, not just what each turns up. Pick lenses that fit the project's **profile** — the development set below is
+*contradict*, not just what each turns up. Use the lenses listed in the active **profile** — the development set below is
 one instance. At minimum: **coverage vs the intended reference/spec** and **completeness/wiring** (is it actually
 reachable/usable end to end, or a dead surface?); for software add **security** and **flow/UX**; for analysis add
 **data correctness/lineage**; for research add **source provenance**; for creative add **factual integrity & internal
@@ -40,7 +47,11 @@ then reconcile. A contradiction between two lenses (one says "done," another "un
 
 Keep an index (`docs/audit/00-index.md`) with batch status and the enumerated real surface — the actual units for the
 profile (screens/endpoints/components; datasets/queries; sources/claims; sections/slides) — so coverage is auditable.
+**Carry a status per batch** (open / closed-by-`<plan>`): an index where a settled batch and a live one look identical
+tells a reader nothing. When every gap in a batch has shipped, move the batch file to `docs/audit/archive/` and leave
+its index line pointing there — the findings stay greppable, they just stop competing for attention with open work.
 
 ## Finish
-Roll the per-batch gaps up into `docs/plans/ROADMAP.md` via `/skill:roadmap-goodbehavior`. The audit *documents* gaps — it does not build
+Roll the per-batch gaps up into a plan (`docs/plans/<INITIATIVE>.md`, indexed from `ROADMAP.md`) via
+`/skill:roadmap-goodbehavior`. The audit *documents* gaps — it does not build
 them; don't start fixing mid-audit.

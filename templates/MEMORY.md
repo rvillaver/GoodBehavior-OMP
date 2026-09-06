@@ -8,6 +8,8 @@ two behavioral non-negotiables below on init; add `gotcha`/`project`/`reference`
 - [Reporting honesty](reporting-honesty.md) — claim only what you can show; surface failures/blockers; state partial/deferred plainly
 - [Build/deploy gotchas](build-deploy-gotchas.md) — project-specific traps (caching, drift, bundled-vs-runtime config, seeded access…); check BEFORE diagnosing
 
+A memory retires when it stops being true or is superseded — not because the issue it described was fixed. Keep the index to one line per live memory; archive/collapse stale memories only when their replacement is clear.
+
 <!-- Seed files to create alongside this index:
 
 project-profile.md   (written by /adopt-goodbehavior from the resolved profile; fill the three slots for THIS project)

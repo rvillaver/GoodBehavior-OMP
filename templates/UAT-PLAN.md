@@ -38,6 +38,9 @@ kept in sync as work ships.
 **TC-Z1.** A full real-world run across roles/screens, in order, confirming the whole loop flows without dead-ends.
 `[ ] Pass [ ] Fail` — notes:
 
+## Retired / superseded cases
+<!-- Retired cases move to docs/qa/archive/ with date + reason; leave one digest line here. Do not let old passing cases clutter the live checklist. -->
+
 ## Known / expected gaps
 <!-- blocked-on-X or by-design-absent cases, so a fail there isn't read as a regression -->
 

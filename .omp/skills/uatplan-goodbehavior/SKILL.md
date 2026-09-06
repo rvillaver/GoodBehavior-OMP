@@ -1,12 +1,12 @@
 ---
 name: uatplan-goodbehavior
-description: Build and maintain a living manual user-acceptance test plan — a map of every feature set, how a human exercises each one on the REAL thing (per the project's profile), the expected result, and a pass/fail checklist to close it out. Complements automated tests and feeds /verify-goodbehavior. Use to make verification coverage durable and auditable, not ad hoc.
+description: Build and maintain a manual UAT plan — every feature, how a human exercises it for real, expected result, pass/fail. Use to make verification coverage durable, not ad hoc.
 ---
 
 Produce and keep current a **human-followable UAT plan** — the durable counterpart to automated tests and to the one-shot
 `/skill:verify-goodbehavior` drive. Where verify proves *one* change live, the UAT plan is the *standing map* of what to test
-across the whole product and whether each case currently passes. Output: `docs/qa/UAT-PLAN.md` (start from
-`templates/UAT-PLAN.md`) — a **default, not a prescription**: if the project already keeps a manual test catalog
+across the whole product and whether each case currently passes. Output: `docs/qa/UAT-PLAN.md` (sections per feature
+area, a case table per section, the reporting protocol at the foot) — a **default, not a prescription**: if the project already keeps a manual test catalog
 (whatever it's named), maintain THAT instead of creating a parallel one. Kept in sync with the feature set as it grows.
 
 ## Organize by feature set (cross-referenced to journeys/personas)
@@ -28,8 +28,10 @@ Flag **known/expected gaps** explicitly (blocked-on-X, by-design-absent) so a fa
 
 ## Keep it live
 - It is **ongoing, not one-shot.** When a feature ships, add or adjust its cases in the *same* change; when a behavior is
-  ratified as by-design, record it. Supersede stale cases explicitly (keep the history) rather than silently deleting —
-  so a once-passing case can't quietly mislead.
+  ratified as by-design, record it. Supersede stale cases explicitly rather than silently deleting — so a once-passing
+  case can't quietly mislead. **Keep that history in `docs/qa/archive/`, not in the live plan**: a retired case moves
+  there (dated), leaving one line in the plan saying it retired and why. A plan that is mostly retired cases is no
+  longer a checklist anyone can read. If you can't tell whether a case is retired, leave it live.
 - Mark each case honestly: `Pass` only with firsthand live evidence (`✔`), never a relayed/assumed result (`⚠`). The
   whole value of the plan is that its green is *trustworthy*.
 

@@ -58,6 +58,15 @@ typical. Never let a **⚠** drive a conclusion — resolve it against the sourc
 Requesting data, proposing a methodology, listing next steps, or outlining a framework does not demonstrate
 understanding. Before any of those, state what you have understood, what remains unknown, and why the unknowns matter.
 
+
+## Reuse, brevity, and housekeeping
+
+Before creating new material, check: necessary? already here? already provided by the tool/format? smallest useful
+unit? only then make the minimum bespoke thing. Keep answers concise unless detail is needed for evidence. When a phase,
+finding, test case, or item is settled, move the full record to an archive and leave one digest line in the live ledger;
+do not keep closed history competing with active work. A learning stays live until it is false or superseded, not merely
+because the bug it described was fixed.
+
 ## Done is not self-declared
 
 "Done" is not "I produced an answer." Done means: the deliverable matches the confirmed objective; every load-bearing

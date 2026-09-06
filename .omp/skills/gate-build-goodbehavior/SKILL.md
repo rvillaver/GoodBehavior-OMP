@@ -1,13 +1,18 @@
 ---
 name: gate-build-goodbehavior
-description: Execute one roadmap phase under the gated loop — build each item, verify it live (exercise the real thing per the project's profile), record learnings, and prove the phase with concrete evidence before starting the next. Use to work through a roadmap without drifting or self-declaring done.
+description: Execute one roadmap phase under the gated loop — build, verify live, record learnings, prove it before the next item. Use to work through a roadmap without drifting or self-declaring done.
 ---
 
-Work the **current (NOW) phase** of `docs/plans/ROADMAP.md`, one item at a time, to the real definition of done.
+**Loop position:** step 4 — after `/skill:roadmap-goodbehavior`; per item it calls `/skill:verify-goodbehavior` and
+`/skill:learn-goodbehavior`. Done and standing-proceed are defined in the active profile (in your instructions).
+
+Work the **current (NOW) phase** of the initiative's plan (`docs/plans/<INITIATIVE>.md`, listed in `ROADMAP.md`), one
+item at a time, to the real definition of done.
 
 ## Per item
 1. **Build** the smallest change that actually closes the gap (reuse before hand-rolling).
-2. **Produce/run** it the project's real way (note the build/deploy traps — see the project's `build-deploy-gotchas`).
+2. **Produce/run** it the project's real way (note the build/deploy traps recorded in project memory,
+   `.omp/goodbehavior/memory/MEMORY.md`).
 3. **Verify live** — run `/skill:verify-goodbehavior`: exercise the real thing the way its consumer would, per the project's
    **profile** (software driven like a user through UI + backend; a dataset validated on real input; claims re-checked
    against sources; a delivered artifact walked + fact-checked), and capture that profile's evidence. A passing test
@@ -19,6 +24,11 @@ Work the **current (NOW) phase** of `docs/plans/ROADMAP.md`, one item at a time,
 Loop-review the phase until **every item has concrete evidence** (or is explicitly deferred to the backlog). Record
 phase-level learnings. Only then advance. Don't carry an unverified item forward silently. Tag each item `✔` (firsthand
 live evidence) or `⚠` (relayed/assumed — **not** done); a phase never advances on a `⚠` item.
+
+**Then close the phase out of the plan** — per `/skill:roadmap-goodbehavior`'s "Close a phase": the phase's items and
+evidence move to `docs/plans/archive/`, one digest line stays behind. Closing a phase *is* part of finishing it, in
+the same change — otherwise the plan grows a full copy of every phase you ever completed, and the document the next
+session opens first becomes the least current thing in the project.
 
 ## Standing-proceed (when granted)
 If the user has granted **standing-proceed** for this plan, run the phases end to end **without per-item check-ins** —

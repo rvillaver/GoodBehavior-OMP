@@ -13,7 +13,7 @@ it," and "evidence" concretely mean is set by the project's **profile** (see `.o
 software driven like a user; a dataset validated on real input; claims re-checked against their sources; a deck
 experienced as its audience would. The discipline is identical; only those three slots change by project type.
 
-Until then, the honest status is **"not done yet."** Default to that. Never self-declare done.
+Until then, the honest status is **"not done yet."** Default to that. Present evidence as **"verified — your confirmation needed"**, never as self-declared done.
 
 ## The loop (every non-trivial task runs this)
 
@@ -58,9 +58,27 @@ thing / verify / evidence" mean here). Then record the agreed conventions so lat
 
 ## Reuse before you build
 
-Before writing new code: does it need to exist? Does the framework/library/an installed dependency already do it? Prefer
-composing what's there over hand-rolling a parallel version. A thin custom wrapper around something that already exists
-is usually the lazy path, not the lean one.
+1. **Necessary** — does it need to exist at all?
+2. **Already here** — this project already does it, or something close enough to extend?
+3. **Already provided** — the language/tool/format/convention you're working in supplies it natively?
+4. **Smallest unit** — the medium's smallest form says/does it (one line, one sentence, one assertion, one beat)?
+5. **Minimum bespoke** — only then: the least new material that closes the gap, nothing decorative.
+
+## Keep the working set current
+
+**Writing "done" is only half an edit.** The moment you mark anything settled — a phase, an item, a test case, a
+finding — moving it out of the working document is part of *that same change*, never a later chore:
+
+1. **Settled** (done, verified, confirmed) — append it, whole, to that corpus's `archive/` and leave **one digest
+   line** behind pointing there. A closed phase is one line, not a full table every future reader scrolls past.
+2. **Superseded** (replaced by something specific) — **collapse it into its successor**, which gains one line of
+   provenance. Don't keep both halves; the successor is where a reader will look.
+3. **Unsure whether it's really settled?** — **it stays.** Never evict what you cannot show is finished.
+
+If you catch yourself appending `DONE` to a line and moving on, stop: the document is now longer and less useful than
+before you touched it. Marking done and archiving are one action. Archive a plan on "done"; archive a learning only
+when it is no longer true. Archived material stays readable and greppable — it loses its claim on working context, not
+its existence. **Never delete to tidy up**, and never groom a document you weren't already working in.
 
 ## Honesty under pressure
 
